@@ -1,11 +1,11 @@
 {
-  "name": "QR CODE Intalar app",
-  "short_name": "QRCODEAPP",
-  "start_url": "index.html",
+  "name": "Nome da Sua Aplicação",
+  "short_name": "Nome Curto",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#7C9881",
-  "theme_color": "#7C9881",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "icon.png",
