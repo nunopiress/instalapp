@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App QR Code</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div id="qrcode"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/qrcode.min.js"></script>
+    <script>
+        // URL para sua aplicação
+        const appURL = "https://htmlpreview.github.io/?https://github.com/nunopiress/DOPPO/blob/main/index.html";
+
+        // Gerar o QR code
+        const qrCode = new QRCode(document.getElementById("qrcode"), {
+            text: appURL,
+            width: 256,
+            height: 256
+        });
+    </script>
+</body>
+</html>
