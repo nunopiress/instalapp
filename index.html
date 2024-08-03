@@ -71,6 +71,17 @@
             font-size: 150%;
             width: 100%;
         }
+
+        /* Centralizar a imagem QR */
+        .qr-code-container {
+            text-align: center;
+            margin-top: 20px; /* Ajuste conforme necessário */
+        }
+
+        .qr-code-container img {
+            max-width: 150px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+        }
     </style>
 
     <script>
@@ -104,6 +115,11 @@
         <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1NZM7K3vqWCwt782Y9xAMWUbRlwYFxVqVzTjXdzEDZZw/edit?resourcekey#gid=675857760'">Histórico de Temperaturas</button>
         <button onclick="window.location.href='https://docs.google.com/spreadsheets/u/0/d/1ILt30A1bMRg1MRSj3efDZosZediuwyVCgTO8NCnL9f8/htmlview#gid=1397434840'">Histórico de Rastreabilidade</button>
     </div>
+
+    <!-- Container para centralizar a imagem QR -->
+    <div class="qr-code-container">
+        <img src="qr.png" alt="QR Code">
+    </div>
+
 </body>
 </html>
-
