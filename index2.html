@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="/manifest.json">
+    <title>Registos</title>
+    <link rel="icon" type="image/png" href="/favicon-32x32.png">
+    
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #F4F6F8;
+            font-family: 'Poppins', sans-serif;
+            color: #2C3E50;
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #logo {
+            width: 60%;
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        button {
+            padding: 15px;
+            background: linear-gradient(135deg, #3498db, #2C3E50);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2C3E50, #3498db);
+            transform: scale(1.05);
+        }
+
+        /* Estilização do Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .modal input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .modal button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        /* QR Code */
+        .qr-code-container {
+            margin-top: 20px;
+        }
+
+        .qr-code-container img {
+            max-width: 120px;
+            height: auto;
+        }
+
+    </style>
+
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function checkPassword() {
+            var password = document.getElementById("passwordInput").value;
+            if (password === "password") {
+                window.location.href = 'outros.html';
+            } else {
+                alert("Senha incorreta! Acesso negado.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="logo" src="HTMLOGO-01.png" alt="Logo da Empresa">
+    
+    <h1>Escolha o Tipo de Registo</h1>
+
+    <div class="button-container">
+        <button onclick="window.location.href='https://forms.gle/xVxjnPnsdbXwcM6m7'">Registo de Limpeza</button>
+        <button onclick="window.location.href='https://forms.gle/ynGKM59FhJ1fJZfp7'">Registo de Temperaturas</button>
+        <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfLfT7kCU2ez7IAPqhrHIPYrZEdArFEVvQ3jRm9xfQsBCg2oA/viewform'">Rastreabilidade Restauração</button>
+        <button onclick="openModal()">Fecho de Caixa</button>
+    </div>
+
+    <p>Histórico de Registos</p>
+
+    <div class="button-container">
+        <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1yNUIgJ-7e5RfDZfCMGrmVbXNYsYXz4uiNOMCoCRPP3Q/edit?resourcekey#gid=246758567'">Histórico de Limpeza</button>
+        <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1NZM7K3vqWCwt782Y9xAMWUbRlwYFxVqVzTjXdzEDZZw/edit?resourcekey#gid=675857760'">Histórico de Temperaturas</button>
+        <button onclick="window.location.href='https://docs.google.com/spreadsheets/u/0/d/1ILt30A1bMRg1MRSj3efDZosZediuwyVCgTO8NCnL9f8/htmlview#gid=1397434840'">Histórico de Rastreabilidade</button>
+    </div>
+
+    <!-- Modal para senha -->
+    <div id="modal" class="modal">
+        <p>Insira a senha para acesso:</p>
+        <input type="password" id="passwordInput">
+        <button onclick="checkPassword()">Entrar</button>
+    </div>
+
+    <!-- QR Code -->
+    <div class="qr-code-container">
+        <img src="qr.png" alt="QR Code">
+    </div>
+
+</body>
+</html>
